@@ -49,3 +49,20 @@
 		STAT_MEC = 6,
 		STAT_COG = 6
 	)
+
+/datum/category_item/setup_option/background/ethnicity/humanglitter
+	name = "Core Ancestry"
+	desc = "Born on one of the major planets of the solar system or an equivalently uplifted outlier, your character has been born in comfort and safety before having left or signed up for this venture.\
+	You've had a healthy background with a proper education availed to you. Video games, ice cream stores, broad internet connections have defined your early life.\
+	You may not have been born on Earth or Mars, but you've had that level of living throughout most of your childhood."
+
+	restricted_to_species = list(FORM_HUMAN, FORM_EXALT_HUMAN)
+
+	stat_modifiers = list(
+		STAT_ROB = 0,
+		STAT_TGH = 2,
+		STAT_VIG = 0,
+		STAT_BIO = 2,
+		STAT_MEC = 2,
+		STAT_COG = 10
+	)
