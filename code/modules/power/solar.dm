@@ -24,9 +24,9 @@
 /obj/machinery/power/solar/examine(mob/user)
 	..()
 	if(glass_power >= 1) //Basiclly lets make sure
-		to_chat(user, "<span class='info'>The pannel reads that its glass power is at : [glass_power]</span>")
+		to_chat(user, "<span class='info'>The panel reads that its glass' gemerated power is at: [glass_power]</span>")
 	else
-		to_chat(user, "<span class='info'>The pannel's glass is damage or dirty and generationg : [glass_power] well normal rating is 1x or more!</span>")
+		to_chat(user, "<span class='info'>The panel's glass reports as damaged or dirty. The generated power may be below or equal to: [glass_power] </span>")
 
 /obj/machinery/power/solar/drain_power()
 	return -1
