@@ -171,11 +171,19 @@
 	// Process unsuitable transplants. TODO: consider some kind of
 	// immunosuppressant that changes transplant data to make it match.
 	if(dna)
+		var/datum/reagent/drug/nosfernium/N = locate(/datum/reagent/drug/nosfernium) in reagents.reagent_list
 		if(!rejecting)
 			if(blood_incompatible(dna.b_type, owner.dna.b_type, species, owner.species))
-				rejecting = 1
+				if(N)
+					dna.b_type = owner.dna.b_type
+					species = owner.species
+				else
+					rejecting = 1
 		else
-			rejecting++ //Rejection severity increases over time.
+			if(N)
+				rejecting--
+			else
+				rejecting++ //Rejection severity increases over time.
 			if(rejecting % 10 == 0) //Only fire every ten rejection ticks.
 				take_damage(round(rejecting / 50), TOX)		// Will cause toxin accumulation wounds
 

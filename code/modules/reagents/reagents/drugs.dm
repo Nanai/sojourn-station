@@ -457,7 +457,7 @@
 /datum/reagent/drug/nosfernium
 	name = "Nosfernium"
 	id = "nosfernium"
-	description = "A chemical for when the body is bleed dry, and if its not will ensure you are left a skeleton."
+	description = "Used to stop the heart temporarily to avoid bloodloss, this terrible concoction also assists in averting transplant rejection. Easily overdosed."
 	taste_description = "teeth"
 	reagent_state = LIQUID
 	color = "#e06270"

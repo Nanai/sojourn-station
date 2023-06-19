@@ -2,7 +2,7 @@
 	name = "locket"
 	desc = "An oval shaped argentium sterling locket. A picture can be placed inside."
 	icon_state = "locket"
-	item_state = "locket"
+	item_state = "konaahirano"
 	slot_flags = 0
 	w_class = ITEM_SIZE_SMALL
 	slot_flags = SLOT_MASK | SLOT_ACCESSORY_BUFFER
@@ -44,3 +44,9 @@
 			src.held = O
 		return
 	..()
+
+/obj/item/clothing/accessory/locket/youtried
+	name = "Medal of Dubious Valor"
+	desc = "Made of a fairly thick gold alloy, this hand-sized pin in the shape of a star is etched with the words <font color=#AAAA77>You Tried!</font>. There is a barely perceptioble clasp on it..."
+	icon_state = "youtried"
+	item_state = "youtried"

@@ -24,6 +24,8 @@
 
 	var/exit_timer
 
+
+
 /obj/machinery/recharge_station/Initialize()
 	. = ..()
 	RefreshParts()
@@ -287,6 +289,9 @@
 	if(user.stat != DEAD && do_after(user,rand(150,200),src))
 		go_in(target, user)
 
+/obj/machinery/recharge_station/attack_ai(mob/user as mob)
+	if(occupant)
+		go_out()
 
 #define REPAIR_HULL 1
 #define REPAIR_COMPONENTS 2
